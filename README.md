@@ -1,4 +1,4 @@
-##Haskell is
+## Haskell is
 - functional (duh)
 - lazy
 - statically typed
