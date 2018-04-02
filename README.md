@@ -19,3 +19,6 @@ To set prompt `Prelude> :set prompt "$> "`
 
 ##### Persistent configurations
 Create a file in your `$HOME` called `.ghci`. Every time you called ghci, it will start calling this file.
+
+##### Load files on ghci
+`$>:l path/file_name`
