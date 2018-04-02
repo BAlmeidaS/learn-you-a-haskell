@@ -9,3 +9,5 @@ Useful references:
 https://www.amazon.com/Learn-You-Haskell-Great-Good/dp/1593272839
 
 https://github.com/haskell/cabal
+
+https://docs.haskellstack.org/en/stable/README/
