@@ -5,14 +5,14 @@
 - type inference
 - elegant and concise
 
-Useful references:
+##### Useful references
 https://www.amazon.com/Learn-You-Haskell-Great-Good/dp/1593272839
 
 https://github.com/haskell/cabal
 
 https://docs.haskellstack.org/en/stable/README/
 
-### Snippets and some useful infos
+## Snippets and some useful infos
 
 ##### Changing prompt
 To set prompt `Prelude> :set prompt "$> "`
