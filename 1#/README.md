@@ -61,3 +61,130 @@ We can use `'` on function name, this does not have a special meaning, just deno
 `brunoAlmeida = "I'm Bruno Almeida and I am studying Haskell using Lipovaca's book`
 
 functions without parameters is a `definition` or a `name`. We cannot change what names mean once we have defined them!
+
+Obs: `let` on GHCi is equivalent to define a `definition` on a script
+
+## Lists
+
+Lists are **homogeneous** data scructures, which means they store several elements of the same type.
+
+```
+$> let lostNumbers=[4,8,15,16,23,42]
+$> lostNumbers
+[4,8,15,16,23,42]
+```
+
+##### Concatenation
+```
+$> [1,2,3] ++ [13,14,15]
+[1,2,3,13,14,15]
+$> "Studying" ++ " " ++ "Haskell"
+"Studying Haskell"
+```
+
+Strings are lists =].
+
+Haskell has to walk through the entire first list when we using `++` operator.
+
+##### Cons Operator
+Adding an item to the beginning of a list. Very perfomatic, near instantaneous
+```
+$> 1:[3,4]
+[1,3,4]
+```
+
+###### Some implementation details
+In fact, `[1,2,3]` is a sugar code to `1:2:3:[]`
+
+##### Accessing List Elements
+Operator `!!`
+
+```
+$> "Bruno Almeida" !! 3
+'n'
+```
+
+##### Comparing list
+lists are comparable in lexicographical order. Operators:  `<`, `<=`, `>=`, `>`, `==`
+
+```
+$> [3,2,1] > [2,10,100]
+True
+```
+
+##### Head and Tail
+```
+$> head [5,4,3,2,1]
+5
+$> tail [5,4,3,2,1]
+[4,3,2,1]
+```
+
+###### Last and Init
+
+```
+$> last [5,4,3,2,1]
+1
+$> init [5,4,3,2,1]
+[5,4,3,2]
+```
+
+##### Length
+```
+$> length [4,3,2]
+3
+```
+
+##### Null
+check if list is empty
+```
+$> null [2,1]
+False
+$> null []
+True
+```
+
+##### Reverse
+```
+$> reverse [4,3,2]
+[2,3,4]
+```
+
+##### Take
+```
+$> take 2 [21,31,41]
+[21,31]
+```
+
+##### Drop
+```
+$> drop 2 [33,44,55,66,77,88]
+[55,66,77,88]
+```
+
+##### Maximum and Minimum
+```
+$> maximum [12,4,37,73,5]
+73
+$> minimum [12,4,37,73,5]
+4
+```
+
+##### Sum and Product
+```
+$> sum [1,2,3,4]
+10
+$> product [1,2,3,4]
+24
+```
+
+##### Elem
+check if the item is in the list
+```
+$> elem 37 [12,4,37,73,5]
+True
+$> 37 `elem` [12,4,37,73,5]
+True
+$> 999 `elem` [12,4,37,73,5]
+False
+```
