@@ -188,3 +188,49 @@ True
 $> 999 `elem` [12,4,37,73,5]
 False
 ```
+
+##### Ranges
+```
+$> [1..10]
+[1,2,3,4,5,6,7,8,9,10]
+$> ['a'..'t']
+"abcdefghijklmnopqrst"
+$> [8,7..3]
+[8,7,6,5,4,3]
+```
+
+We could specify a step between items. This step must define a arithmetic progression.
+
+```
+$> [3,6..20]
+[3,6,9,12,15,18]
+$> [0.1,0.3..1]
+[0.1,0.3,0.5,0.7,0.8999999999999999,1.0999999999999999]
+```
+
+You can specify a range without upper limit, because haskell is lazy it won't evaluate the list before it need it.
+
+```
+$> take 7 [12,26..]
+[12,26,40,54,68,82,96]
+```
+
+##### Cycles
+
+cycles define an infinite lists.
+```
+$> take 27 (cycle "Haskell ")
+"Haskell Haskell Haskell Has"
+```
+
+##### Repeat
+```
+$> take 5 (repeat "Hi")
+["Hi","Hi","Hi","Hi","Hi"]
+```
+##### Replicate
+An easier way to compose a list with a single item
+```
+$> replicate 5 "Hi"
+["Hi","Hi","Hi","Hi","Hi"]
+```
