@@ -234,3 +234,24 @@ An easier way to compose a list with a single item
 $> replicate 5 "Hi"
 ["Hi","Hi","Hi","Hi","Hi"]
 ```
+
+## List Comprehension
+
+A way to filter, transform and combine lists. Similary to the math concept to define a set: `{ 2.x | x IN N, x <= 10 }`
+The example says, *take all the natural number less than or equal to 10, multiply each one by 2, and use these results to create a new set*
+
+Using list comprehension we could write this:
+```
+$> [x*2 | x <- [1..10]]
+[2,4,6,8,10,12,14,16,18,20]
+```
+
+###### Predicate
+Predicates are conditions on list comprehensions, they appear after the `|` and they are separete by a comma.
+
+adding a predicate on last example:
+```
+$> [x*2 | x <- [1..10], x*2 >= 12]
+[12,14,16,18,20]
+```
+
